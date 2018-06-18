@@ -1049,7 +1049,6 @@ CheckPython optimized
 
 
 %files
-%defattr(-, root, root)
 %license LICENSE
 %doc README.rst
 %{_bindir}/pydoc*
@@ -1063,7 +1062,6 @@ CheckPython optimized
 %{_libexecdir}/system-python
 
 %files libs
-%defattr(-,root,root,-)
 %license LICENSE
 %doc README.rst
 
@@ -1279,7 +1277,6 @@ CheckPython optimized
 %{_libdir}/libpython3.so
 
 %files devel
-%defattr(-,root,root)
 %{_bindir}/2to3
 # TODO: Remove 2to3-3.7 once rebased to 3.7
 %{_bindir}/2to3-%{pybasever}
@@ -1302,7 +1299,6 @@ CheckPython optimized
 %{_rpmconfigdir}/macros.d/macros.systempython
 
 %files idle
-%defattr(-,root,root,755)
 %{_bindir}/idle*
 %{pylibdir}/idlelib
 %{_datadir}/appdata/idle3.appdata.xml
@@ -1310,7 +1306,6 @@ CheckPython optimized
 %{_datadir}/icons/hicolor/*/apps/idle3.*
 
 %files tkinter
-%defattr(-,root,root,755)
 %{pylibdir}/tkinter
 %exclude %{pylibdir}/tkinter/test
 %{dynload_dir}/_tkinter.%{SOABI_optimized}.so
@@ -1323,7 +1318,6 @@ CheckPython optimized
 %{pylibdir}/turtledemo/__pycache__/*%{bytecode_suffixes}
 
 %files test
-%defattr(-, root, root)
 %{pylibdir}/ctypes/test
 %{pylibdir}/distutils/tests
 %{pylibdir}/sqlite3/test
@@ -1345,8 +1339,6 @@ CheckPython optimized
 
 %if %{with debug_build}
 %files debug
-%defattr(-,root,root,-)
-
 # Analog of the core subpackage's files:
 %{_bindir}/python%{LDVERSION_debug}
 %{_bindir}/python3-debug
