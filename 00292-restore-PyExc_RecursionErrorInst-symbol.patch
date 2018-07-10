@@ -1,22 +1,3 @@
-diff --git a/Doc/whatsnew/3.6.rst b/Doc/whatsnew/3.6.rst
-index 847b50140a6..570dc3ed6fe 100644
---- a/Doc/whatsnew/3.6.rst
-+++ b/Doc/whatsnew/3.6.rst
-@@ -1852,10 +1852,10 @@ Build and C API Changes
- * The :c:func:`PyUnicode_FSConverter` and :c:func:`PyUnicode_FSDecoder`
-   functions will now accept :term:`path-like objects <path-like object>`.
- 
--* The ``PyExc_RecursionErrorInst`` singleton that was part of the public API
--  has been removed as its members being never cleared may cause a segfault
--  during finalization of the interpreter. Contributed by Xavier de Gaye in
--  :issue:`22898` and :issue:`30697`.
-+* The ``PyExc_RecursionErrorInst`` singleton is not used anymore as its members
-+  being never cleared may cause a segfault during finalization of the
-+  interpreter. Contributed by Xavier de Gaye in :issue:`22898` and
-+  :issue:`30697`.
- 
- 
- Other Improvements
 diff --git a/Include/pyerrors.h b/Include/pyerrors.h
 index c28c1373f82..8c1dbc5047b 100644
 --- a/Include/pyerrors.h
