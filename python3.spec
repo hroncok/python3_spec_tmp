@@ -14,7 +14,7 @@ URL: https://www.python.org/
 #  WARNING  When rebasing to a new Python version,
 #           remember to update the python3-docs package as well
 Version: %{pybasever}.5
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: Python
 
 
@@ -1470,6 +1470,10 @@ CheckPython optimized
 # ======================================================
 
 %changelog
+* Tue Jul 10 2018 Tomas Orsava <torsava@redhat.com> - 3.6.5-2
+- Fix %%py_byte_compile macro: when invoked with a Python 2 binary it also
+  mistakenly ran py3_byte_compile
+
 * Thu Mar 29 2018 Charalampos Stratakis <cstratak@redhat.com> - 3.6.5-1
 - Update to 3.6.5
 
