@@ -14,7 +14,7 @@ URL: https://www.python.org/
 #  WARNING  When rebasing to a new Python version,
 #           remember to update the python3-docs package as well
 Version: %{pybasever}.6
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: Python
 
 
@@ -462,7 +462,7 @@ Requires: glibc%{?_isa} >= 2.24.90-26
 
 %if %{with gdbm}
 # When built with this (as guarded by the BuildRequires above), require it
-Requires: gdbm%{?_isa} >= 1:1.13
+Requires: gdbm-libs%{?_isa} >= 1:1.13
 %endif
 
 # There are files in the standard library that have python shebang.
@@ -1562,6 +1562,9 @@ CheckPython optimized
 # ======================================================
 
 %changelog
+* Fri Aug 10 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 3.6.6-3
+- Fix wrong requirement on gdbm
+
 * Sat Jul 14 2018 Fedora Release Engineering <releng@fedoraproject.org> - 3.6.6-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
