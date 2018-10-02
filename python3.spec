@@ -13,8 +13,8 @@ URL: https://www.python.org/
 
 #  WARNING  When rebasing to a new Python version,
 #           remember to update the python3-docs package as well
-Version: %{pybasever}.6
-Release: 3%{?dist}
+Version: %{pybasever}.7
+Release: 1%{?dist}
 License: Python
 
 
@@ -233,7 +233,7 @@ BuildRequires: python3-pip
 # Source code and patches
 # =======================
 
-Source: https://www.python.org/ftp/python/%{version}/Python-%{version}.tar.xz
+Source: https://www.python.org/ftp/python/%{version}/Python-%{version}%{?prerel}.tar.xz
 
 # Supply an RPM macro "py_byte_compile" for the python3-devel subpackage
 # to enable specfiles to selectively byte-compile individual files and paths
@@ -1562,6 +1562,9 @@ CheckPython optimized
 # ======================================================
 
 %changelog
+* Mon Oct 22 2018 Miro Hrončok <mhroncok@redhat.com> - 3.6.7-1
+- Update to 3.6.7
+
 * Fri Aug 10 2018 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 3.6.6-3
 - Fix wrong requirement on gdbm
 
