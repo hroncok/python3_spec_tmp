@@ -200,11 +200,12 @@ BuildRequires: libGL-devel
 BuildRequires: libX11-devel
 BuildRequires: ncurses-devel
 
-BuildRequires: openssl-devel
 BuildRequires: pkgconfig
 BuildRequires: readline-devel
 BuildRequires: sqlite-devel
 BuildRequires: gdb
+
+BuildRequires: openssl-devel
 
 BuildRequires: tar
 BuildRequires: tcl-devel
